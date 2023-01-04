@@ -1,0 +1,84 @@
+<div id="id01" class="modals">
+  
+
+    <!-- Modal Content -->
+    <form class="modal-contents animate" id="userLogin" method="get" action="index.html">
+     
+      <div class="container">
+        <label for="uname"><b>Username</b></label>
+        <input type="text" placeholder="Enter Username" id="uname" name="user" required>
+  
+        <label for="psw"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" id="psw" name='pass' required><br>
+        <div id="invalid">Enter username or password is wrong</div><br>
+  
+        <button type="submit" onclick="login()">Login</button>
+      
+        <label>
+          <input type="checkbox" checked="checked" name="remember"> Remember me
+        </label>
+      </div>
+  
+      <div class="containers" style="background-color:#f1f1f1">
+        <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+        <span class="psw" onclick="document.getElementById('forgot').style.display='block'">Forgot <a href="#">password?</a></span>
+        <span class="psw">New user<a href="#" onclick="document.getElementById('id02').style.display='block';document.getElementById('id01').style.display='none'">Register here?</a></span>
+
+      </div>
+    </form>
+   
+  </div>
+
+  <div id="forgot" class="modals">
+  
+
+    <!-- Modal Content -->
+    <form class="modal-contents animate" id="userLogin" method="get" action="index.html">
+     
+      <div class="container">
+        <label for="uname"><b>Username</b></label>
+        <input type="text" placeholder="Enter Username" id="forgotuname" name="user" required>
+  
+        <label for="psw"><b>New Password</b></label>
+        <input type="password" placeholder="Enter Password" id="forgotpsw" name='pass' required>
+       
+  
+        <button type="submit" onclick="forgot()">Login</button>
+      
+       
+      </div>
+  
+      <div class="containers" style="background-color:#f1f1f1">
+        <button type="button" onclick="document.getElementById('forgot').style.display='none'" class="cancelbtn">Cancel</button>
+        
+
+      </div>
+    </form>
+   
+  </div>
+
+  <div id="id04" class="modals">
+  
+
+  <!-- Modal Content -->
+  <form class="modal-contents animate" id="userLogin" method="get" action="index.html">
+   
+    <div class="container">
+     
+
+      <button type="button" onclick="getAccount(sessionStorage.getItem('id')),document.getElementById('id05').style.display='block';document.getElementById('id04').style.display='none'">Manage my account</button>
+      <button type="button" data-toggle="modal" data-target="#commentModal" onclick="review(sessionStorage.getItem('id'))">My Review</button>
+      <button type="submit" onclick="logout()">Logout</button>
+     
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id04').style.display='none'" class="cancelbtn">Cancel</button>
+     
+
+    </div>
+  </form>
+ 
+</div>
+  <div w3-include-html="registerModal.html"> 
+     
